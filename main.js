@@ -1,10 +1,12 @@
 const electron = require('electron');
+const path = require('path');
 
-const argument = process.argv[process.argv.length - 1];
+let argument = process.argv[process.argv.length - 1];
 if (argument.substr(-4) !== '.qml') {
   console.error(new Error('you should specify a *.qml file.'));
   process.exit(0);
 }
+argument = path.resolve(argument);
 
 global.qmlwebViewer = {
   argument
