@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QmlWeb</title>
+  </head>
+  <body style="margin:0">
+  </body>
+  <script>
+    require('qmlweb/lib/qt.js');
+    const qmlweb_parser = require('qmlweb/lib/qmlweb.parser.js');
+    window.qmlweb_parse = qmlweb_parser.qmlweb_parse;
+    window.qmlweb_jsparse = qmlweb_parser.qmlweb_jsparse;
+    require('./renderer')
+  </script>
+</html>
