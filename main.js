@@ -28,8 +28,15 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 20, height: 20});
+  mainWindow = new BrowserWindow({
+    width: 20,
+    height: 20,
+    fullscreen: argv.fullscreen
+  });
   mainWindow.setMenu(null);
+  if (argv.maximized) {
+    mainWindow.maximize();
+  }
   mainWindow.loadURL(`file://${__dirname}/index.html`);
   if (argv.debug) {
     mainWindow.webContents.openDevTools({ detach: true });
