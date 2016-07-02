@@ -7,9 +7,9 @@ const argv = minimist(process.argv.slice(2), {
 });
 
 let argument = argv._[0];
-if (argument.substr(-4) !== '.qml') {
-  console.error(new Error('you should specify a *.qml file.'));
-  process.exit(0);
+if (!argument) {
+  console.error('Error: No filename specified!');
+  process.exit(1);
 }
 argument = path.resolve(argument);
 
