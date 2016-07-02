@@ -15,7 +15,7 @@ production.
 The only purpose of this tool is to test QmlWeb and visually compare the rendered
 results with Qt QML output (e.g. `qmlscene`).
 
-## Usage
+## Installation and usage
 
 #### Prerequisites
 
