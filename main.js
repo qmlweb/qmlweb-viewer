@@ -1,10 +1,16 @@
 const electron = require('electron');
 const path = require('path');
 const minimist = require('minimist');
+const usage = require('./usage');
 
 const argv = minimist(process.argv.slice(2), {
   boolean: true
 });
+
+if (argv.help) {
+  console.error(usage);
+  process.exit(0);
+}
 
 let argument = argv._[0];
 if (!argument) {
