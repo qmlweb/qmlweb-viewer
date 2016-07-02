@@ -1,7 +1,12 @@
 const electron = require('electron');
 const path = require('path');
+const minimist = require('minimist');
 
-let argument = process.argv[process.argv.length - 1];
+const argv = minimist(process.argv.slice(2), {
+  boolean: true
+});
+
+let argument = argv._[0];
 if (argument.substr(-4) !== '.qml') {
   console.error(new Error('you should specify a *.qml file.'));
   process.exit(0);
@@ -20,7 +25,9 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 20, height: 20});
   mainWindow.setMenu(null);
   mainWindow.loadURL(`file://${__dirname}/index.html`);
-  //mainWindow.webContents.openDevTools();
+  if (argv.debug) {
+    mainWindow.webContents.openDevTools({ detach: true });
+  }
   mainWindow.on('closed', () => { mainWindow = null });
 }
 

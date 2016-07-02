@@ -45,6 +45,11 @@ qmlweb-viewer path-to-file.qml
 This way, you can use `qmlweb-viewer` from any directory, it will be added into
 your `PATH`.
 
+## Debugging
+
+Launch with the `--debug` flag, e.g. `qmlweb-viewer --debug path-to-file.qml`
+to open a Developer Tools window alongside with your QML file.
+
 ## License
 
 QmlWeb-Viewer is licensed under the MIT license, see

@@ -6,13 +6,14 @@
   "repository": "qmlweb/qmlweb-viewer",
   "main": "main.js",
   "bin": {
-    "qmlweb-viewer" : "qmlweb-viewer.js"
+    "qmlweb-viewer": "qmlweb-viewer.js"
   },
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {
     "electron-prebuilt": "^1.2.0",
+    "minimist": "^1.2.0",
     "qmlweb": "^0.1.0"
   },
   "files": [
