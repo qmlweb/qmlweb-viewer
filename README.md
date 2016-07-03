@@ -50,6 +50,13 @@ your `PATH`.
 Launch with the `--debug` flag, e.g. `qmlweb-viewer --debug path-to-file.qml`
 to open a Developer Tools window alongside with your QML file.
 
+### Using with a development version of QmlWeb
+
+To use with QmlWeb from the `master` branch (or any other non-release version),
+follow the [installation](#installation-and-usage) steps, then remove the
+`./node_modules/qmlweb/lib` directory and replace it with a symlink to a `./lib`
+directory of your development QmlWeb version.
+
 ## License
 
 QmlWeb-Viewer is licensed under the MIT license, see
