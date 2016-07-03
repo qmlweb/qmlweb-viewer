@@ -2,6 +2,7 @@ const electron = require('electron');
 const path = require('path');
 const minimist = require('minimist');
 const usage = require('./usage');
+const ipcMain = electron.ipcMain;
 
 const argv = minimist(process.argv.slice(2), {
   boolean: true
@@ -43,6 +44,12 @@ function createWindow () {
   }
   mainWindow.on('closed', () => { mainWindow = null });
 }
+
+ipcMain.on('console', (event, arg) => {
+  try {
+    console[arg.method].apply(console, arg.args);
+  } catch (e) {}
+});
 
 app.on('ready', createWindow)
 
