@@ -1,6 +1,6 @@
 {
   "name": "qmlweb-viewer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bringing QmlWeb to your desktop",
   "license": "MIT",
   "repository": "qmlweb/qmlweb-viewer",
