@@ -12,27 +12,29 @@ Based on [QmlWeb](https://github.com/qmlweb/qmlweb) and [Electron](https://githu
 This is not a replacement to Qt QML by any means and should not be used in
 production.
 
-The only purpose of this tool is to test QmlWeb and visually compare the rendered
-results with Qt QML output (e.g. `qmlscene`).
+The only purpose of this tool is to test QmlWeb and visually compare the
+rendered results with Qt QML output (e.g. `qmlscene`).
 
 ## Installation and usage
 
-#### Prerequisites
+### Prerequisites
 
 You need Node.js with npm to install and run qmlweb-viewer.
 
 See [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/)
 or [Node Version Manager](http://nvm.sh) for more detailed instructions on that.
 
-#### Local install (to a subdirectory):
+### Local install (to a subdirectory)
+
 ```sh
 npm i qmlweb-viewer
 ./node_modules/.bin/qmlweb-viewer path-to-file.qml
 ```
 
-This way, `qmlweb-viewer` will be installed into the `node_modules` subdirectory.
+This way, `qmlweb-viewer` will be installed into the `node_modules`
+subdirectory.
 
-#### Global install
+### Global install
 
 See [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
 to fix permissions issues, running `npm` as root is not recommended.
