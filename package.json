@@ -14,7 +14,7 @@
   "dependencies": {
     "electron-prebuilt": "^1.2.0",
     "minimist": "^1.2.0",
-    "qmlweb": "^0.1.0"
+    "qmlweb": "^0.2.0"
   },
   "files": [
     "AUTHORS",
