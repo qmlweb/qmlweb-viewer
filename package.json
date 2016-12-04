@@ -12,7 +12,7 @@
     "start": "electron ."
   },
   "dependencies": {
-    "electron-prebuilt": "^1.2.0",
+    "electron-prebuilt": "^1.4.10",
     "minimist": "^1.2.0",
     "qmlweb": "^0.2.0"
   },
